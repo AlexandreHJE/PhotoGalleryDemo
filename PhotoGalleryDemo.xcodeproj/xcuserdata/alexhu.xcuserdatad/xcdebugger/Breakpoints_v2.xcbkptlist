@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "EAE49920-29BA-4EFC-88CD-BC1330E49D84"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "56ED5669-422A-4FC6-8274-2491C96672C3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotoGalleryDemo/ResultPage/ResultPageViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "loadContent(keyword:imagePerPage:currentPage:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "56ED5669-422A-4FC6-8274-2491C96672C3 - c5fa8d0eccf394ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;PhotoGalleryDemo.PhotoSearchResult, Swift.Error&gt;) -&gt; () in PhotoGalleryDemo.ResultPageViewModel.loadContent(keyword: Swift.String, imagePerPage: Swift.String, currentPage: Swift.Int) -&gt; ()"
+                  moduleName = "PhotoGalleryDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexhu/Desktop/PhotoGalleryDemo/PhotoGalleryDemo/ResultPage/ResultPageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "1108">
+               </Location>
+               <Location
+                  uuid = "56ED5669-422A-4FC6-8274-2491C96672C3 - 11df2305db42f4d8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (PhotoGalleryDemo.Photo) -&gt; PhotoGalleryDemo.PhotoModel in closure #1 (Swift.Result&lt;PhotoGalleryDemo.PhotoSearchResult, Swift.Error&gt;) -&gt; () in PhotoGalleryDemo.ResultPageViewModel.loadContent(keyword: Swift.String, imagePerPage: Swift.String, currentPage: Swift.Int) -&gt; ()"
+                  moduleName = "PhotoGalleryDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexhu/Desktop/PhotoGalleryDemo/PhotoGalleryDemo/ResultPage/ResultPageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BAF32ACF-D10E-4EE7-B79A-B6B924E33944"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotoGalleryDemo/ResultPage/ResultPageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "48DDA1E9-156D-4779-82B6-CE0D2A33C615"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotoGalleryDemo/ResultPage/ResultPageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BCC4D8A5-7DC5-4A5E-8351-8385A0E299FD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotoGalleryDemo/ResultPage/ResultPageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6EC33A86-C093-4F6C-87B7-A60A06EC89DC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotoGalleryDemo/ResultPage/ResultPageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
