@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol PhotoCellSpec {
+    var labelText: String { get }
+    var isFavorite: Bool { get }
+}
+
 class PhotoCell: UICollectionViewCell {
     
     lazy var imageView: UIImageView = {
@@ -17,7 +22,7 @@ class PhotoCell: UICollectionViewCell {
         return imageView
     }()
     
-    lazy var titleLabel: UILabel = {
+    private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
@@ -28,7 +33,7 @@ class PhotoCell: UICollectionViewCell {
         return label
     }()
     
-    lazy var favoriteIcon: UIImageView = {
+    private lazy var favoriteIcon: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleToFill
@@ -72,4 +77,8 @@ class PhotoCell: UICollectionViewCell {
         imageView.cancelImageLoad()
       }
     
+    func layout(with spec: PhotoCellSpec) {
+        titleLabel.text = spec.labelText
+        favoriteIcon.image = spec.isFavorite ? UIImage(named: "heart_on") : UIImage(named: "heart_off")
+    }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PhotoModel: NSObject {
+final class PhotoModel: NSObject {
     
     var title: String = ""
     var imageURL: String = ""
@@ -17,5 +17,22 @@ class PhotoModel: NSObject {
         self.title = title
         self.imageURL = imageURL
         self.isFavorite = isFavorite
+    }
+}
+
+extension PhotoModel: Decodable { }
+
+extension PhotoModel: Encodable { }
+
+extension PhotoModel {
+    
+    override func isEqual(_ object: Any?) -> Bool {
+        guard let object = object as? PhotoModel else {
+            return false
+        }
+        
+        return
+            title == object.title &&
+            imageURL == object.imageURL
     }
 }

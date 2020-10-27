@@ -7,9 +7,16 @@
 
 import UIKit
 
+protocol ResultPageViewControllerStore {
+
+    func save(photoModel: PhotoModel)
+    func delete(photoModel: PhotoModel)
+}
+
 class ResultPageViewController: UIViewController {
     
     private let viewModel = ResultPageViewModel()
+    private let store: ResultPageViewControllerStore?
     
     var keyWord = ""
     var imagePerPage = ""
@@ -38,6 +45,15 @@ class ResultPageViewController: UIViewController {
         
         return collectionView
     } ()
+    
+    init(store: ResultPageViewControllerStore?) {
+        self.store = store
+        super.init(nibName: nil, bundle: nil)
+    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,7 +120,7 @@ extension ResultPageViewController: UICollectionViewDataSource {
             cell.imageView.loadImage(at: imageURL)
         }
         
-        cell.titleLabel.text = cellInfo.title
+        cell.layout(with: cellInfo)
         
         return cell
     }
@@ -120,6 +136,19 @@ extension ResultPageViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        let cellInfo = viewModel.photoModels[indexPath.item]
+        
+        cellInfo.isFavorite = !cellInfo.isFavorite
+        
+        if cellInfo.isFavorite {
+            //Do add to DB
+            store?.save(photoModel: cellInfo)
+        } else {
+            //Do remove to DB
+            store?.delete(photoModel: cellInfo)
+        }
+        
+        collectionView.reloadItems(at: [indexPath])
     }
     
 }
@@ -130,4 +159,11 @@ extension ResultPageViewController: UICollectionViewDelegate {
 
 extension ResultPageViewController: UICollectionViewDelegateFlowLayout {
     
+}
+
+extension PhotoModel: PhotoCellSpec {
+    
+    var labelText: String {
+        return title
+    }
 }

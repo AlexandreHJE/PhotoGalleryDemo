@@ -32,6 +32,6 @@ extension Photo {
     
     func toPhotoModel() -> PhotoModel {
         let imageURL = "https://farm\(farm).staticflickr.com/\(server)/\(id)_\(secret)_m.jpg"
-        return PhotoModel(title: title, imageURL: imageURL)
+        return PhotoModel(title: title, imageURL: imageURL, isFavorite: false)
     }
 }

@@ -7,6 +7,12 @@
 
 import Foundation
 
+import Foundation
+
+protocol FavoritePageViewModelStore {
+    func delete(photoModel: PhotoModel)
+}
+
 protocol FavoritePageViewModelDelegate: class {
     func viewModel(_ viewModel: FavoritePageViewModel, didUpdateFavorites: [PhotoModel])
 }

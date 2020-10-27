@@ -80,7 +80,8 @@ class SearchPageViewController: UIViewController {
     }
 
     private func pushResultVC() {
-        let resultVC = ResultPageViewController()
+        let store = UserDefaultStore()
+        let resultVC = ResultPageViewController(store: store)
         resultVC.keyWord = viewModel.searchKeyWord
         resultVC.imagePerPage = viewModel.photosPerPage
         self.navigationController?.pushViewController(resultVC, animated: true)
